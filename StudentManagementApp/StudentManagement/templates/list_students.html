@@ -1,0 +1,23 @@
+<!-- list_students.html -->
+<h1>Student List</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.email }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'create_student' %}">Add New Student</a>
